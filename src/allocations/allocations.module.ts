@@ -19,9 +19,22 @@ import { DeliveryProbabilityController } from './delivery-probability/delivery-p
 import { HiringSignalService } from './hiring-signal/hiring-signal.service';
 import { HiringSignalController } from './hiring-signal/hiring-signal.controller';
 import { DecisionEngineService } from '../intelligence/decision-engine.service';
+import { AnalyticsService } from './analytics/analytics.service';
+import { AnalyticsController } from './analytics/analytics.controller';
 @Module({
   imports: [SupabaseModule],
-  controllers: [AllocationsController, AllocationIntelligenceController, AllocationFairnessController, AutoAllocationController, AllocationRiskController, AllocationOutcomeController, AllocationForecastController, DeliveryProbabilityController, HiringSignalController],
+  controllers: [
+    AllocationsController,
+    AllocationIntelligenceController,
+    AllocationFairnessController,
+    AutoAllocationController,
+    AllocationRiskController,
+    AllocationOutcomeController,
+    AllocationForecastController,
+    DeliveryProbabilityController,
+    HiringSignalController,
+    AnalyticsController
+  ],
  providers: [
   AllocationsService,
   AllocationIntelligenceService,
@@ -33,6 +46,7 @@ import { DecisionEngineService } from '../intelligence/decision-engine.service';
   DeliveryProbabilityService,
   HiringSignalService,
   DecisionEngineService,
+  AnalyticsService,
 ],
 
 })
