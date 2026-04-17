@@ -1,5 +1,6 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { EmployeesService } from './employees.service';
+import { CreateEmployeeDto } from './dto/create-employee.dto';
 
 @Controller('employees')
 export class EmployeesController {
@@ -11,7 +12,7 @@ export class EmployeesController {
   }
 
   @Post()
-  async create(@Body() body: any) {
+  async create(@Body() body: CreateEmployeeDto) {
     return this.employeesService.create(body);
   }
 
